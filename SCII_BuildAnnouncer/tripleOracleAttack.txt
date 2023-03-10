@@ -1,0 +1,23 @@
+Time    -Description
+0000    -Protoss: Triple oracle attack build
+0013    -Get ready: Pylon
+0015    -Build Pylon
+0017    -Set camera hotkeys
+0034    -Build gateway and send to scout
+0039    -Build gas and chrono boost
+0057    -When minerals saturated, rally to gas
+0065    -Chrono boost
+0081    -Build Cyber core, Nexus, and stop probes
+0101    -Build low ground pylon and 2nd gas
+0102    -Resume probes
+0121    -Make adept, chrono boost it
+0127    -Get ready: stargate
+0131    -Make stargate
+0138    -Second adept
+0139    -Warp gate
+0168    -Nexus finished
+0174    -Oracle, chrono boost it
+0176    -Double gate, proxy pylon
+0198    -Chrono warpgate
+0200    -2nd oracle
+0235    -Pylon

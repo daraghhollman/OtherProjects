@@ -1,0 +1,13 @@
+Time    -Description
+0000    -Protoss: Three gate zealot build
+0006    -Rally to natural
+0018    -Build Pylon
+0024    -Set camera hotkeys
+0034    -Rally probe to natural
+0039    -Chrono nexus
+0041    -Gateway and scout
+0048    -Gas
+0072    -Move probe to gas
+0075    -Rally to nexus
+0077    -Rally to gas
+0080    -Cyber core
