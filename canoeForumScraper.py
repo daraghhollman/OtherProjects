@@ -11,22 +11,24 @@ htmlContent = response.text
 
 soup = BeautifulSoup(htmlContent, 'html.parser')
 
-# Find all links on the page
-links = soup.find_all('a')
+linkContainers = soup.find_all("tbody", class_="content")
 
-# Loop through each link and follow it to other pages on the forum
-for link in links:
-    # Get the URL for the link
-    href = link.get('href')
+for linkGroup in linkContainers:
+    links = linkGroup.find_all("a", class_="subject")
 
-    if 'forum.ucdcanoeclub.com/' in href:
+    for link in links:
+        href = link.get("href")
         print(href)
 
 #https://forum.ucdcanoeclub.com/index.php/topic,13001.0.html
 
 
-def ReadPage():
-    soup = BeautifulSoup(html_content, "html.parser")
+def ReadPage(url):
+
+    response = requests.get(url)
+    thisHtmlContent = response.text
+
+    soup = BeautifulSoup(thisHtmlContent, "html.parser")
 
     # Get title
     forumTopic = soup.find("title").text
@@ -48,3 +50,5 @@ def ReadPage():
         body = post.find(class_="inner").text
 
         print(f"Post by {author}, {authorTitle}, {date}:\n{body}\n")
+
+#ReadPage("https://forum.ucdcanoeclub.com/index.php/topic,13001.0.html")
