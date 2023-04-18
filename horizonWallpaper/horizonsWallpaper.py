@@ -7,7 +7,7 @@ today = str(date.today())
 
 def Previous(date):
     date = datetime.strptime(date, '%Y-%m-%d')
-    previous_date = date - timedelta(days=360)
+    previous_date = date - timedelta(days=200)
     return previous_date.strftime('%Y-%m-%d')
 
 def GetPosition(id, centre, date):
@@ -87,7 +87,7 @@ def DrawImage(bodies, names, colours, islabelled, scale=1, drawTrails=True):
     print("Image Saved")
 
 def ReadIDList(path):
-    ids, names, colours, isLabelled_str = np.loadtxt(path, unpack=True, dtype={'names': ('ID', 'Name', 'Colour', 'isLabelled'), "formats": ('|S15', '|S15', '|S15', '|S15')}, delimiter="-")
+    ids, names, colours, isLabelled_str = np.loadtxt(path, unpack=True, dtype={'names': ('ID', 'Name', 'Colour', 'isLabelled'), "formats": ('|S15', '|S15', '|S15', '|S15')}, delimiter=";")
     ids = [str(id)[2:-1] for id in ids]
     
     isLabelled = []
@@ -113,7 +113,7 @@ for id in ids:
     if id.isnumeric(): id = int(id)
     else: id = str(id)
 
-    bodies.append(GetPosition(id, "500@3", today))
+    bodies.append(GetPosition(id, "500@10", today))
 
 print("Drawing bodies...")
 DrawImage(bodies, names, colours, isLabelled, scale=10)
