@@ -7,7 +7,7 @@ today = str(date.today())
 
 def Previous(date):
     date = datetime.strptime(date, '%Y-%m-%d')
-    previous_date = date - timedelta(days=200)
+    previous_date = date - timedelta(days=100)
     return previous_date.strftime('%Y-%m-%d')
 
 def GetPosition(id, centre, date):

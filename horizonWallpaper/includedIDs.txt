@@ -24,3 +24,5 @@ A907 CF;Hektor;A0C4DC;False
 A804 RA;Juno;A0C4DC;False
 C/2022 E3;C/2023 E3;A54077;True
 4822 P-L;Encke;A54077;True
+-143205;Tesla Roadster;000000;True
+-144;Solar Orbiter;000000;True
